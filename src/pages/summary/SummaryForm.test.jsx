@@ -44,7 +44,7 @@ describe("Summary Form Test", () => {
     describe("'Terms and Conditions' popover tests", () => {
         it("popover starts out hidden", async () => {
             render(<SummaryForm/>);
-            const termsPopover = screen.queryByText("No ice cream will actually be delivered", {});
+            const termsPopover = screen.queryByText("Dont skip to read!", {});
             expect(termsPopover).not.toBeInTheDocument();
         });
 
@@ -54,7 +54,7 @@ describe("Summary Form Test", () => {
             const termsText = screen.getByText("Terms and Conditions", {});
 
             await user.hover(termsText);
-            const termsPopover = screen.getByText("No ice cream will actually be delivered", {});
+            const termsPopover = screen.getByText("Dont skip to read!", {});
             expect(termsPopover).toBeInTheDocument();
             expect(termsPopover).toBeVisible();
         });
@@ -65,7 +65,7 @@ describe("Summary Form Test", () => {
             const termsText = screen.getByText("Terms and Conditions", {});
 
             await user.unhover(termsText);
-            const termsPopover = screen.queryByText("No ice cream will actually be delivered", {});
+            const termsPopover = screen.queryByText("Dont skip to read!", {});
             expect(termsPopover).not.toBeInTheDocument();
         });
     });
