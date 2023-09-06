@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ColorButton from './color-button/ColorButton';
 import reportWebVitals from './reportWebVitals';
+import SummaryForm from "./pages/summary/SummaryForm";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ColorButton />
+    <SummaryForm />
   </React.StrictMode>
 );
 

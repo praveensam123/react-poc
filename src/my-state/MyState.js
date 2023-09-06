@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "./MyState.css";
 
 export const MyState = () => {
     const [value, setValue] = useState(1);
