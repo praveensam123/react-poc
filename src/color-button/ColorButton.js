@@ -8,16 +8,17 @@ function ColorButton() {
 
     const [disabled, setDisabled] = useState(false);
 
-    return <div>
+    return <div id="page">
         <button
             style={{backgroundColor: disabled ? 'gray' : buttonColor}}
             disabled={disabled}
             onClick={() => setButtonColor(newButtonColor)}
         >Change to {newButtonColor}
         </button>
+        <br/>
         <input
             type='checkbox'
-            data-testid = "disableButton-checkbox"
+            data-testid="disableButton-checkbox"
             id='disableButton-checkbox'
             onChange={(event) => setDisabled(event.target.checked)}
         />
