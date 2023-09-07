@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ColorButton from "./color-button/ColorButton";
+import SkillForm from "./pages/skills/form/SkillForm";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ColorButton />
+    <SkillForm />
   </React.StrictMode>
 );
 
