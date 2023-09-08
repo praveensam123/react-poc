@@ -1,28 +1,14 @@
 import "./Skill.css";
+import Radio from "../../../common/Radio";
+import TextField from "../../../common/TextField";
 
 function Skill(props) {
-
     return <div id="row">
-        <label>
-            <input type="text" data-testid={`skill-${props.count}`}/>
-            Skill {props.count}
-        </label>
-        <label>
-            <input type="radio" value="beginner" name={`proficiency-${props.count}`} data-testid={`proficiency-${props.count}`}/>
-            Beginner
-        </label>
-        <label>
-            <input type="radio" value="user" name={`proficiency-${props.count}`} data-testid={`proficiency-${props.count}`}/>
-            User
-        </label>
-        <label>
-            <input type="radio" value="expert" name={`proficiency-${props.count}`} data-testid={`proficiency-${props.count}`}/>
-            Expert
-        </label>
-        <label>
-            <input type="radio" value="master" name={`proficiency-${props.count}`} data-testid={`proficiency-${props.count}`}/>
-            Master
-        </label>
+        <TextField name={`skill-${props.count}`} label={`Skill ${props.count}`}/>
+        <Radio name="proficiency" label="Beginner" value="beginner" count={props.count}/>
+        <Radio name="proficiency" label="User" value="user" count={props.count}/>
+        <Radio name="proficiency" label="Expert" value="expert" count={props.count}/>
+        <Radio name="proficiency" label="Master" value="master" count={props.count}/>
     </div>;
 }
 
